@@ -1,17 +1,103 @@
 * {
-  margin:0px;
-  padding:0px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-#octocat {
-  display: block;
-  width:384px;
-  margin: 50px auto;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
 }
 
-p {
-  display: block;
-  width: 400px;
-  margin: 50px auto;
-  font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+legend,
+label[for="mensagem"] {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    padding-left: 0.2em;
+    padding-top: 1em;
 }
+label[for],
+button {
+    display: block;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    padding: .25em .5em;
+    margin-left: 1em;
+    width: 90%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+button {
+    border: none;
+    border-radius: 5.5px;
+    padding: .5em 1em;
+    font-family: "Crimson", sans-serif;
+    background-color: rgba(57, 144, 228, 0.9);
+    color: white;
+    font-size: 1.2em;
+    margin-left: auto;
+    margin-top: 1em;
+}
+input:invalid {
+    box-shadow: 0 0 3px red;
+}
+input:hover,
+textarea:hover {
+    background-color: #FFD;
+}
+button:hover {
+  background: #0575e6; /* este aqui é no aso de browsers com versões antigas */
+  background: -webkit-linear-gradient(to right, #0575e6, #021b79)
+}
+input[value="Outro"] + input {
+    display: none;
+}
+input[value="Outro"]:checked + input {
+    display: block;
+}
+img {
+    width: 100%;
+    height: 160px;
+}
+
+fieldset {
+  max-width: 500px;
+  padding: 16px;
+}
+
+.main-field {
+  margin-bottom: 0px;
+  margin-left: 16px;
+}
+
+.radio-box {
+  margin: 15px 15px;
+}
+
+.rodape-pagina {
+    color: #F2FFFC;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    text-shadow: 1px 1px black;
+    background-image: radial-gradient(ellipse at left bottom,
+        rgba(57, 144, 228, 0.9),
+        rgba(57, 144, 228, 0.9) 65%,
+        black 65%,
+        black 70%,
+        transparent 70%);
+    background-size: 25% 100%;
+}
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Teste</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+</head>
+<body>
+    <img src='./img/teste.jpg' alt='Banner Padrão/Estático'/>
+    <main>
+        <div class="main-field">
+            <form>
+            	<!-- responsavel pelo formulario de nome e email -->
+                <fieldset>
+                    <legend>Seus dados</legend>
+                    <label for="nome" class="main-field">Nome completo</label>
+                    <input id="nome" type="text" name="nome" required autofocus pattern="[A-Za-z ']{4,}" title="O nome precisa ter pelo menos 4 caracteres">
+                    <br>
+                    <br>
+                    <label for="email" class="main-field">E-mail</label>
+                    <input id="email" type="email" name="email" required placeholder="seu@email.com">
+                </fieldset>
+                <fieldset>
+                	<!-- responsavel pelos input em radio -->
+                    <legend>Assunto</legend>
+                    <label>
+                        <input type="radio" name="assunto" class='radio-box' value="Serviço">
+                        Serviço
+                    </label>
+                    <label>
+                        <input type="radio" name="assunto" class='radio-box' value="Outro">
+                        Outro
+                        <input type="text" name="outro-assunto">
+                    </label>
+                </fieldset>
+                <!-- responsavel pelo campo de mensagem -->
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" cols="60" rows="10" placeholder="Digite aqui sua mensagem"></textarea>
+                <button type="submit" onclick=acao(this)>Enviar mensagem</button>
+            </form>
+        </div>
+    </main>
+    <footer class="rodape-pagina">
+        &copy; Murilo Iacovone 2019
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
